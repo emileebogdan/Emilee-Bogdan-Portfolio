@@ -1,96 +1,198 @@
+/* Brings a font in from google  */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+/* Applies formating to overall page */
 * {
-    box-sizing: border-box;
+    box-sizing: boarder-box;
     padding: 0;
     margin: 0;
 }
-
+/* Overall body format */
 body {
-    background-color: #cad2c5;
-    color: #2f3e46;
-}
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: #cad2c5;
+    line-height: 1.6;
 
-.header {
-    padding: 25px;
-    background-color: #84a98c;
-    color: #2f3e46;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    flex-direction: column;
-    line-height: 1.3;
 }
-
-nav ul {
-    padding: 5px;
-    margin-right: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 25px;
-    justify-content: space-between;
-    min-width: 300px;
-    
+/* styles nav list */
+ul {
+    list-style-type: none;
 }
-
-nav a {
-    color: #2f3e46;
-    font-weight: bold;
+/* styles a tag*/
+a{
     text-decoration: none;
-  }
-
-nav ul li {
-    display: inline-block;
-    margin-left: 25px;
+    color: #cad2c5
 }
-
-p{
-    font-size: 20px;
+/* heading styles */
+h1,h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
 }
-.hero {
-    height: 400px;
-    width: 100%;
-    margin-bottom: 5px;
-    background-image: url(https://tzassets.bestwestern.com/wp-content/uploads/2020/10/22230528/BWTZ-Oct20-UTAH-TW-1024x512.jpg);
-    background-size: cover;
-    background-position: center;
+/* p style */
+p {
+    margin: 10px 0;
 }
-.content {
-    width: 100%;
-    text-align: center;
+/* img style */
+img {
+    width: 100%
 }
-
-.content img {
-    max-height: 400px;
+/* nav bar style  */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #2f3e46;
+    height: 90px;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2)
     
 }
+/* nav bar links */
+.navbar ul {
+    display: flex;
+}
+/* navbar a tag */
+.navbar a {
+    padding: 10px;
+    margin: 0 5px;
+}
+/* underlines navbar links on hover */
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+}
 
-.content section {
-    margin-bottom: 20px;
-    padding: 15px;
-    height: 430px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* adds flex to nav */
+.navbar .flex {
+    justify-content: space-between;
+}
+/* Styles container in content */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0 40px;
+}
+/* styles about h1 */
+.about h1 {
+    font-size: 45px;
+    margin: 5px 15px;
+}
+/* styles about background */
+.about {
     background-color: #354f52;
-    color: #cad2c5;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+}
+/* styles about p tag */
+.about p {
+    margin: 10px;
+    padding: 10px;
+    text-align:justify;
+    display: flex;
+}
+/* styles about img */
+.about img {
+    max-height: 300px;
+    max-width: 200px;
+}
+/* styles content h1 */
+.content h1 {
+    font-size: 45px;
+    margin: 5px 15px;
+}
+/* styles background of content */
+.content {
+    background-color: #52796F;
+    margin: 10px;
+    padding: 10px;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
+
+/* styles content p */
+.content p {
+    margin: 10px 0;
+}
+/* styles content card */
+.card {
+    background-color: #354f52ce;
+    margin: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.704)
+}
+/* changes card on hover */
+.card:hover{
+    background-color: #CAD2C5;
+    color:#354f52ce ;
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.704)
 }
 
-.float-right {
-    float: right;
-    margin-left: 25px;
+
+/* styles flex tag */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-footer {
-    margin-bottom: 20px;
-    padding: 15px;
-    height: 100px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* styles card grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+/* styles contact background */
+.contact {
     background-color: #354f52;
-    color: #cad2c5;
+    margin: 10px;
+    padding: 15px;
+    height: 150px;
 }
+/* styles contact h1 */
+.contact h1 {
+    font-size: 45px;
+    margin: 5px 15px;
+}
+/* styles content section */
+.contact {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+/* styles contact imgs  */
+.contact img {
+    display: flex;
+    padding: 10px;
+    max-width: 100px;
+    max height: 100px;
 
-@media screen and (max-width: 768px) {
-    header {
-      flex-direction: column;
+}
+/* makes images grow on hover */
+.contact img:hover{
+    max-width: 125px;
+    max-height: 125px;
+}
+/* stacks navbar on smaller screens    */
+@media screen and (max-width: 640px) {
+    .navbar .flex {
+    flex-direction: column;
+
     }
-  }
+}
+/* removes about img on small screens */
+@media screen and (max-width: 640px) {
+    .about img {
+        display: none;
+    }
+    
+}
+/* stacks work section on smaller screens  */
+@media screen and (max-width: 640px) {
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
